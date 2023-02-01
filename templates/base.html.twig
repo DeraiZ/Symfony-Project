@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
@@ -14,6 +14,14 @@
         {% endblock %}
     </head>
     <body>
+        {% block nav %}
+            <div class="nav">
+                <a href="/">Accueil <span>|</span></a>
+                <a href="/products">Produits <span>|</span></a>
+                <a href="/contact">Contacter-nous <span>|</span></a>
+                <a href="/aboutus">A propos</a>
+            </div>
+        {% endblock %}
         {% block body %}{% endblock %}
     </body>
 </html>
