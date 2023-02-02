@@ -6,6 +6,7 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Mime\Email;
@@ -13,28 +14,32 @@ use Symfony\Component\Mime\Email;
 class ContactController extends AbstractController
 {
     #[Route('/contact', name: 'app_contact')]
-    public function index(): Response
+    public function index(Request $request, MailerInterface $mailerInterface): Response
     {
-        return $this->render('contact/contact.html.twig', [
-            'controller_name' => 'ContactController',
-        ]);
-    }
+        if ($request->isMethod('POST')) {
 
-    public function sendEmail(MailerInterface $mailer): Response
-    {
-        $email = (new Email())
-            ->from($_POST['mail'])
-            ->to('smtp://:@mailcatcher:1025')
-            //->cc('cc@example.com')
-            //->bcc('bcc@example.com')
-            //->replyTo('fabien@example.com')
-            //->priority(Email::PRIORITY_HIGH)
-            ->subject($_POST['sujet'])
-            ->text($_POST['content'])
-            ->html('<p>See Twig integration for better HTML integration!</p>');
+            // php bin/console messenger:consume async -vv
 
-        $mailer->send($email);
+            $sender = $request->request->get('email');
+            $subject = $request->request->get('sujet');
+            $message = $request->request->get('content');
 
-        // ...
+            var_dump($sender);
+
+            $email = (new Email())
+                // email address as a simple string
+                ->from($sender)
+                ->to('contact@example.com')
+                //->cc('cc@example.com')
+                //->bcc('bcc@example.com')
+                //->replyTo('fabien@example.com')
+                // ->priority(Email::PRIORITY_HIGH)
+                ->subject($subject)
+                ->text($message);
+
+            $mailerInterface->send($email);
+
+        }
+        return $this->render('contact/index.html.twig');
     }
 }
