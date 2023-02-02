@@ -57,7 +57,7 @@ cd symfony-docker-template
 ### Création des fichiers nécéssaires
 - Créer un fichier .env avec la strucuture du fichier .env.example et renseigner les credentials
 ```shell
-cp .env.example .env
+cp .env.exemple .env
 ```
 
 ### Installation des dépendances Javascript

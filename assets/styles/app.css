@@ -1,173 +1,252 @@
-body {
-    background-color: #171616;
-    color: #29d506;
-    font-family: 'VT323', monospace;
+
+
+@media screen and (min-width: 600px) {
+    body {
+        background-color: #171616;
+        color: #29d506;
+        font-family: 'VT323', monospace;
+    }
+
+    button{
+        background-color: #171616;
+        color: #29d506;
+        border: #29d506 2px solid;
+        margin-left: 35% ;
+    }
+
+    ul {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .productItem{
+        list-style-type: none;
+    }
+
+    .card p{
+        padding: 0 10% 0 10%;
+    }
+
+    .card button{
+        margin-bottom: 5%;
+        margin-top: 5%;
+
+    }
+
+    .card{
+        margin-bottom: 5%;
+
+    }
+
+    .card h3{
+        margin-left: 35%;
+    }
+
+    .PS1 {
+        grid-column: 1/2;
+        margin-left: 30%;
+        border: #29d506 2px solid;
+    }
+
+    .gamecube{
+        grid-column: 2/3;
+        margin-left: 20%;
+        border: #29d506 2px solid;
+
+    }
+
+    .SNES{
+        grid-column: 1/2;
+        margin-left: 30%;
+        border: #29d506 2px solid;
+
+    }
+
+    .Nint64 {
+        grid-column: 2/3;
+        margin-left: 20%;
+        border: #29d506 2px solid;
+    }
+
+    .sega{
+        grid-column: 1/2;
+        margin-left: 30%;
+        border: #29d506 2px solid;
+
+    }
+
+    .atari{
+        grid-column: 2/3;
+        margin-left: 20%;
+        border: #29d506 2px solid;
+    }
+
+    .nav {
+        background-color: #171616;
+
+    }
+
+    .nav a, a {
+        text-decoration: none;
+        color: #29d506;
+    }
+
+    .contactForm{
+        margin-top: 7%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contactForm label{
+
+    }
+
+    .phoneLabel{
+        grid-column: 5/8;
+        margin-top: 2%;
+
+    }
+
+    .phone{
+        grid-column: 5/8;
+        grid-row: 2/3;
+
+    }
+
+    .mailLabel{
+        grid-column: 5/8;
+        margin-top: 2%;
+
+    }
+
+    .mail{
+        grid-column: 5/8;
+        grid-row: 4/5;
+    }
+
+    .sujetLabel{
+        grid-column: 5/8;
+        margin-top: 2%;
+
+    }
+
+    .sujet{
+        grid-column: 5/8;
+        grid-row:6/7 ;
+    }
+
+    .msgLabel{
+        grid-column: 5/8;
+        grid-row: 7/8;
+        margin-top: 2%;
+    }
+
+    .content{
+        grid-column: 5/8;
+        grid-row: 8/9;
+    }
+
+    .submit{
+        border: #29d506 2px solid;
+        margin-top: 4%;
+        grid-column: 5/8;
+        grid-row: 9/10;
+        margin-right: 10%;
+        display: flex;
+        justify-content: center;
+        font-size: larger;
+        margin-left: 10%;
+    }
+
+    input {
+        background-color: #171616;
+        border: #29d506 2px solid;
+        caret-color: #29d506;
+        color: #29d506;
+        font-family: 'VT323', monospace;
+        font-size: larger;
+
+        height: 2rem;
+    }
+
+    .About{
+        margin-top: 8%;
+    }
 }
 
-button{
-    background-color: #171616;
-    color: #29d506;
-    border: #29d506 2px solid;
-    margin-left: 35% ;
-}
+@media screen and (max-width: 600px) {
 
-ul {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-}
+    body {
+        background-color: #171616;
+        color: #29d506;
+        font-family: 'VT323', monospace;
+    }
 
-.productItem{
-    list-style-type: none;
-}
+    button{
+        background-color: #171616;
+        color: #29d506;
+        border: #29d506 2px solid;
+        margin-left: 35% ;
+    }
 
-.card p{
-    padding: 0 10% 0 10%;
-}
+    .product{
+        display: grid;
+        grid-template-rows: repeat(6,1fr);
+    }
 
-.card button{
-    margin-bottom: 5%;
-    margin-top: 5%;
+    .PS1 {
+        grid-row: 1/2;
+        margin-left: 20%;
+        border: #29d506 2px solid;
+    }
 
-}
+    .gamecube{
+        grid-row: 2/3;
+        margin-left: 20%;
+        border: #29d506 2px solid;
 
-.card{
-    margin-bottom: 5%;
+    }
 
-}
+    .SNES{
+        grid-row: 3/4;
+        margin-left: 20%;
+        border: #29d506 2px solid;
 
-.card h3{
-    margin-left: 35%;
-}
+    }
 
-.PS1 {
-    grid-column: 1/2;
-    margin-left: 30%;
-    border: #29d506 2px solid;
-}
+    .Nint64 {
+        grid-row: 4/5;
+        margin-left: 20%;
+        border: #29d506 2px solid;
+    }
 
-.gamecube{
-    grid-column: 2/3;
-    margin-left: 20%;
-    border: #29d506 2px solid;
+    .sega{
+        grid-row: 5/6;
+        margin-left: 20%;
+        border: #29d506 2px solid;
 
-}
+    }
 
-.SNES{
-    grid-column: 1/2;
-    margin-left: 30%;
-    border: #29d506 2px solid;
+    .atari{
+        grid-row: 6/7;
+        margin-left: 20%;
+        border: #29d506 2px solid;
+    }
 
-}
+    .gameboy{
+        grid-row: 6/7;
+        margin-left: 20%;
+        border: #29d506 2px solid;
+    }
 
-.Nint64 {
-    grid-column: 2/3;
-    margin-left: 20%;
-    border: #29d506 2px solid;
-}
+    li{
+        list-style-type: none;
+    }
 
-.sega{
-    grid-column: 1/2;
-    margin-left: 30%;
-    border: #29d506 2px solid;
-
-}
-
-.atari{
-    grid-column: 2/3;
-    margin-left: 20%;
-    border: #29d506 2px solid;
-}
-
-.nav {
-    background-color: #171616;
-
-}
-
-.nav a, a {
-    text-decoration: none;
-    color: #29d506;
-}
-
-.contactForm{
-    margin-top: 7%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.contactForm label{
-
-}
-
-.phoneLabel{
-    grid-column: 5/8;
-    margin-top: 2%;
-
-}
-
-.phone{
-    grid-column: 5/8;
-    grid-row: 2/3;
-
-}
-
-.mailLabel{
-    grid-column: 5/8;
-    margin-top: 2%;
-
-}
-
-.mail{
-    grid-column: 5/8;
-    grid-row: 4/5;
-}
-
-.sujetLabel{
-    grid-column: 5/8;
-    margin-top: 2%;
-
-}
-
-.sujet{
-    grid-column: 5/8;
-    grid-row:6/7 ;
-}
-
-.msgLabel{
-    grid-column: 5/8;
-    grid-row: 7/8;
-    margin-top: 2%;
-}
-
-.content{
-    grid-column: 5/8;
-    grid-row: 8/9;
-}
-
-.submit{
-    border: #29d506 2px solid;
-    margin-top: 4%;
-    grid-column: 5/8;
-    grid-row: 9/10;
-    margin-right: 10%;
-    display: flex;
-    justify-content: center;
-    font-size: larger;
-    margin-left: 10%;
-}
-
-input {
-    background-color: #171616;
-    border: #29d506 2px solid;
-    caret-color: #29d506;
-    color: #29d506;
-    font-family: 'VT323', monospace;
-    font-size: larger;
-
-    height: 2rem;
-}
-
-.About{
-    margin-top: 8%;
+    a{
+        text-decoration: none;
+        color: #29d506;
+    }
 }

@@ -16,10 +16,10 @@
     <body>
         {% block nav %}
             <div class="nav">
-                <a href="/">Accueil <span>|</span></a>
-                <a href="/products">Produits <span>|</span></a>
-                <a href="/contact">Contacter-nous <span>|</span></a>
-                <a href="/aboutus">A propos</a>
+                <a href="{{ path('app_home') }}">Accueil <span>|</span></a>
+                <a href="{{ path('app_products') }}">Produits <span>|</span></a>
+                <a href="{{ path('app_contact') }}">Contacter-nous <span>|</span></a>
+                <a href="{{ path('app_aboutus') }}">A propos</a>
             </div>
         {% endblock %}
         {% block body %}{% endblock %}
